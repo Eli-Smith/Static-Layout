@@ -126,6 +126,9 @@ li {
     margin: 10px;
     font-family: 'Dosis', sans-serif;
     width: auto;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 a {
@@ -505,10 +508,10 @@ a:visited {
     display: flex;
     align-items: flex-start;
 
-    color: rgb(158, 111, 222);
+    color: #745fb5;
 
     font-family: 'Source Sans Pro' sans-serif;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .lists{
@@ -516,16 +519,18 @@ a:visited {
 
     display: flex;
     flex-direction: row;
-}
-
-.list1 {
-    width: 50%;
-    display: flex;
     align-items: flex-start;
 }
 
+.list1 {
+    width: 55%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: -7%
+}
+
 .list2 {
-    width: 50%;
+    width: 55%;
     display: flex;
     align-items: flex-start;
 }
