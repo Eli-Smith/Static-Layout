@@ -1,0 +1,531 @@
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+
+/* GLOBAL STYLING RULES */
+
+/* New Layout Tooltip */
+
+#new-layout {
+    height: 8px;
+    width: 8px;
+    
+    background-color: rgb(99, 242, 176);
+
+    border-radius: 50%;
+
+    position: relative;
+    display: inline-block;
+    /* float: right; */
+    margin: 10px;
+
+    /* bottom: 5px; */
+    top:10px;
+}
+
+#new-layout-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    bottom: 140%;
+    left: -100%;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#new-layout #new-layout-text::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+#new-layout:hover #new-layout-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Share on Facebook Tooltip */
+
+.facebook-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    bottom: 840px;
+    right: 110px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.facebook:hover .facebook-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Share on Twitter Tooltip */
+
+.twitter-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    bottom: 840px;
+    right: 80px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.twitter:hover .twitter-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+body {
+    background-color: #f1f3f5;
+    padding: 10px;
+    margin: 0px;
+}
+
+ol {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+    font-family: 'Dosis', sans-serif;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+.btn-text {
+    font-family: 'Dosis', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-left: 15px;
+}
+
+/* Nav Bar Styling */
+
+.container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    height: auto;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 1%;
+}
+
+.back {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back:hover {
+    background-color:rgb(144, 123, 187);
+}
+
+.back-button {
+    color: black;
+    align-items: center;
+}
+
+.back:hover .back-button {
+    color: white;
+}
+
+.brand {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Dosis', sans-serif;
+}
+
+.brand:hover{
+    color: rgb(144, 123, 187);
+}
+
+.twitter {
+    margin: 15px;
+}
+
+/* Site Header Styling */
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    text-align: center
+}
+
+.header h1 {
+    font-size: 49px;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 1px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: gray;
+}
+
+.stacruz {
+    font-weight: normal;
+}
+
+.stacruz:hover {
+    color: rgb(139, 226, 221);
+}
+
+/* Search Bar Styling*/
+
+.search-container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+.search-bar-container {
+    background-color: white;
+    height: 64px;
+    width: 708px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 2px 2px #E4E9E9;
+}
+
+.prefix {
+    background-color: whitesmoke;
+    color: gray;
+    box-shadow: 1px 1px #E4E9E9;
+
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 5px;
+
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200px;
+}
+
+.split {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.search-bar {
+    border-style: none;
+    width: 550px;
+    height: 60px;
+
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 1px;
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+/* Ad Styling */
+
+.ad-container {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.sponsored-by {
+    font-size: 12px;
+    color: gray;
+    letter-spacing: 1px;
+    
+    margin-bottom: -10px;
+    margin-top: 25px;
+}
+
+.ad-by {
+    color: gray;
+    font-size: 12px;
+
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+
+/* Site Buttons Styling */
+
+.button-container {
+    width: 708px;
+    height: auto;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.bash-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg, #745fb5,#9a6dbb);; /* Color used for Vim and Go */
+}
+
+.bash-btn:hover {
+    background: #59498a
+}
+
+.enzyme-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg, #678,#6f8793); /* Color used for React and Xpath */
+}
+
+.enzyme-btn:hover {
+    background: #585858;
+}
+
+.es6-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg,#14af83,#15b89a); /* Color used for sass */
+}
+
+.es6-btn:hover {
+    background: #319277;
+}
+
+.go-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg,#745fb5,#9a6dbb);
+}
+
+.go-btn:hover {
+    background: #59498a
+}
+
+.react-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg,#678,#6f8793);
+}
+
+.react-btn:hover {
+    background: #585858;
+}
+
+.sass-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg,#14af83,#15b89a);
+}
+
+.sass-btn:hover {
+    background: #319277;
+}
+
+.vim-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg,#745fb5,#9a6dbb)
+}
+
+.vim-btn:hover {
+    background: #59498a
+}
+
+.xpath-btn {
+    width: 170px;
+    height: 55px;
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    border-style: none;
+    border-radius: 5%;
+
+    color: white;
+    background: linear-gradient(15deg,#678,#6f8793);
+}
+
+.xpath-btn:hover {
+    background: #585858;
+}
+
+/* Site Lists Styling */
+
+.page-list-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-header {
+    width: 708px;
+    box-shadow: 0px 1px rgb(223, 223, 223);
+
+    display: flex;
+    align-items: flex-start;
+
+    color: rgb(158, 111, 222);
+
+    font-family: 'Source Sans Pro' sans-serif;
+    font-size: 16px;
+}
+
+.lists{
+    width: 708px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.list1 {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.list2 {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
